@@ -9,12 +9,15 @@ export const Searchbar = ({onHandleSubmit}) => {
 
   //при зміні значення в полі оновлюється стан query
   const handleChange = e => {
-    setQuery(e.currentTarget.value.toLowerCase().trim());
+    setQuery(e.currentTarget.value);
   };
 
   //на сабміті форми перевіряю чи запит не є порожнім рядком
   const handleSubmit = e => {
     e.preventDefault();
+    if (query.trim() === '') {
+      return alert('не можна зробити запит');
+    }
 
     onHandleSubmit(query); //onHandleSubmit як пропс передається Searchbar
     setQuery(''); //очищаю query на порожній рядок після іншого запиту
@@ -33,3 +36,4 @@ export const Searchbar = ({onHandleSubmit}) => {
 Searchbar.propTypes = {
   onHandleSubmit: PropTypes.func.isRequired,
 };
+
