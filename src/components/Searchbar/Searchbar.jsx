@@ -4,7 +4,7 @@ import { Form, Button } from '../Styled.imafeFinder';
 
 //тут вводю запит користувача
 
-export const Searchbar = ({onHandleSubmit}) => {
+export const Searchbar = ({ onHandleSubmit }) => {
   const [query, setQuery] = useState('');
 
   //при зміні значення в полі оновлюється стан query
@@ -36,4 +36,3 @@ export const Searchbar = ({onHandleSubmit}) => {
 Searchbar.propTypes = {
   onHandleSubmit: PropTypes.func.isRequired,
 };
-
