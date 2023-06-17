@@ -1,5 +1,14 @@
 import styled from '@emotion/styled';
 
+export const Divs = styled.div`
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: cornsilk;
+`;
+
 export const Form = styled.form`
   display: flex;
   justify-content: center;
@@ -15,12 +24,13 @@ export const Ul = styled.ul`
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 16px;
-  margin-top: 0;
+  margin-top: 40px;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
   margin-left: auto;
   margin-right: auto;
+
 `;
 
 export const Img = styled.img`

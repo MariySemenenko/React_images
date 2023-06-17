@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button } from '../Styled.imafeFinder';
+import { Form, Button, Divs } from '../Styled.imafeFinder';
 
 //тут вводю запит користувача
 
@@ -24,12 +24,12 @@ export const Searchbar = ({ onHandleSubmit }) => {
   };
 
   return (
-    <>
+    <Divs>
       <Form onSubmit={handleSubmit}>
         <input value={query} onChange={handleChange} />
         <Button type="submit">Search</Button>
       </Form>
-    </>
+    </Divs>
   );
 };
 
